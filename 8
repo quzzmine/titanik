@@ -1,0 +1,9 @@
+import pandas as pd
+
+t = pd.read_csv('titanic.csv')
+
+cfs = t[(t['Sex'] == 'female') & (t['Pclass'] == 1) & (t['Survived'] == 1)].shape[0]
+print(cfs)
+
+cpn = t[(t['Age'] < 18) & (t['Parch'] == 0)].shape[0]
+print(cpn)
