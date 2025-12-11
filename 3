@@ -1,0 +1,19 @@
+import pandas as pd
+
+t = pd.read_csv('titanic.csv')
+
+sc = t[t['Survived'] == 1].shape[0]
+print(sc)
+
+sp = sc / t.shape[0] * 100
+print(f"{sp:.2f}")
+
+w = t[t['Sex'] == 'female']
+ws = w[w['Survived'] == 1].shape[0]
+wp = ws / w.shape[0] * 100
+print(f"{wp:.2f}")
+
+m = t[t['Sex'] == 'male']
+ms = m[m['Survived'] == 1].shape[0]
+mp = ms / m.shape[0] * 100
+print(f"{mp:.2f}")
