@@ -1,12 +1,9 @@
 import pandas as pd
 
-titanic_data = pd.read_csv('titanic.csv')
+t = pd.read_csv('titanic.csv')
 
-passenger_count = titanic_data.shape[0]
-print(passenger_count)
+pc = t.shape[0]
+print(pc)
 
-missing_age_count = titanic_data['Age'].isna().sum()
-print(missing_age_count)
-
-
-
+mc = t['Age'].isna().sum()
+print(mc)
